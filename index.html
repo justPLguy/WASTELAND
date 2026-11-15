@@ -139,9 +139,9 @@ h3{font:700 21px/1.2 var(--cond);margin:0 0 8px;letter-spacing:.02em}
 .show li{display:flex;gap:12px;color:#d6c9ad}
 .show li::before{content:"";flex:none;width:8px;height:8px;margin-top:9px;background:var(--rust2);transform:rotate(45deg)}
 .chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:22px;font:600 13px var(--mono)}
-.chain span{background:var(--panel2);border:1px solid var(--line);border-radius:4px;padding:6px 10px;color:var(--text)}
+.chain > span{background:var(--panel2);border:1px solid var(--line);border-radius:4px;padding:6px 10px;color:var(--text)}
 .chain b{color:var(--rust2);font-weight:700}
-.chain span.raw{color:#c9b07d}.chain span.ok{color:var(--good);border-color:rgba(150,201,94,.4)}
+.chain > span.raw{color:#c9b07d}.chain > span.ok{color:var(--good);border-color:rgba(150,201,94,.4)}
 
 /* loop */
 .loop{background:radial-gradient(ellipse at 50% 0,rgba(194,95,44,.12),transparent 60%),var(--bg)}
@@ -238,7 +238,55 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px;background:#0d0a07}
 .rv.in{opacity:1;transform:none}
 .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
 
+
+/* world */
+.world{background:radial-gradient(ellipse at 20% 0,rgba(194,95,44,.10),transparent 55%),var(--bg2)}
+.region-switch{display:flex;justify-content:center;gap:8px;margin:34px 0 26px;flex-wrap:wrap}
+.region-switch button{font:600 14px var(--font);letter-spacing:.08em;text-transform:uppercase;padding:10px 18px;border-radius:999px;border:1px solid var(--line2);background:var(--panel);color:var(--muted);cursor:pointer;transition:.2s}
+.region-switch button[aria-selected=true]{background:var(--rust);border-color:var(--rust);color:#fff;box-shadow:0 8px 24px rgba(194,95,44,.3)}
+.region-intro{max-width:760px;margin:0 auto 26px;text-align:center;color:#d6c9ad}
+.loc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.loc{position:relative;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:var(--r);padding:20px 18px;overflow:hidden}
+.loc .em{font-size:30px;line-height:1;margin-bottom:12px;display:block}
+.loc h3{font-size:19px}
+.loc p{margin:0 0 12px;color:var(--muted);font-size:14px;line-height:1.5}
+.loc .meta{display:flex;flex-wrap:wrap;gap:6px;font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.loc .meta > span{padding:4px 8px;border-radius:3px;border:1px solid var(--line2);color:var(--muted)}
+.loc .meta .r-low{color:var(--good);border-color:rgba(150,201,94,.4)}
+.loc .meta .r-medium{color:var(--sand);border-color:rgba(224,184,102,.4)}
+.loc .meta .r-high{color:#e0573f;border-color:rgba(224,87,63,.45)}
+.loc .loot{margin-top:10px;font-size:13px;color:#cbbd9d}
+.region-panel[hidden]{display:none}
+.lore-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.lore{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--rust);border-radius:var(--r);padding:24px}
+.lore p{margin:0;color:var(--muted)}
+.tier-track{display:flex;gap:0;margin-top:14px}
+.tier-track > span{flex:1;text-align:center;font:600 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:8px 4px;border:1px solid var(--line2);color:var(--muted);background:var(--bg)}
+.tier-track > span:first-child{border-radius:4px 0 0 4px}.tier-track > span:last-child{border-radius:0 4px 4px 0;color:var(--sand)}
+.tier-track small{display:block;font-size:10px;color:var(--dim);margin-top:2px}
+
+/* guide */
+.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:50px}
+.gcard{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:var(--r);padding:24px 22px}
+.gcard.wide{grid-column:span 2}
+.gcard .big{font:700 34px/1 var(--cond);color:var(--sand);display:block;margin:4px 0 8px}
+.gcard p{margin:0 0 10px;color:var(--muted);font-size:15px}
+.gcard p:last-child{margin-bottom:0}
+.res-tiers{display:grid;gap:12px;margin-top:6px}
+.res-tiers > div{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:start}
+.res-tiers b{font:600 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--dim);padding-top:5px}
+.res{display:flex;flex-wrap:wrap;gap:6px}
+.res > span{display:inline-flex;align-items:center;gap:5px;font-size:13px;padding:4px 9px;border-radius:999px;background:var(--bg);border:1px solid var(--line)}
+.res > span > i{width:8px;height:8px;border-radius:50%;display:inline-block}
+.traits{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 12px}
+.traits > span{font-size:13px;padding:5px 10px;border-radius:4px;background:rgba(150,201,94,.08);border:1px solid rgba(150,201,94,.3);color:#cfe3b4}
+.steps{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font:600 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.steps > span{padding:6px 9px;border:1px solid var(--line2);border-radius:3px;background:var(--bg)}
+.steps b{color:var(--rust2)}
+
 @media (max-width:1000px){
+  .guide-grid{grid-template-columns:1fr 1fr}.gcard.wide{grid-column:span 2}
+  .lore-row{grid-template-columns:1fr}
   .feat-grid{grid-template-columns:repeat(2,1fr)}
   .show,.show.rev{grid-template-columns:1fr;gap:30px}
   .show.rev .shot{order:0}
@@ -252,7 +300,9 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px;background:#0d0a07}
   .nav ul a{display:block;padding:12px 0}
   .burger{display:block;margin-left:auto}
   .nav .btn.discord.sm span{display:none}
-  .road-grid,.loop-grid,.prin-grid{grid-template-columns:1fr}
+  .road-grid,.loop-grid,.prin-grid,.guide-grid{grid-template-columns:1fr}
+  .gcard.wide{grid-column:auto}
+  .res-tiers > div{grid-template-columns:1fr}
   .loop-grid{gap:34px}.loop-grid::before{display:none}
   section{padding:80px 0}
   .perks{grid-template-columns:1fr}
@@ -290,7 +340,8 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px;background:#0d0a07}
     </a>
     <ul id="menu">
       <li><a href="#game"><span class="en">The game</span><span class="pl">Gra</span></a></li>
-      <li><a href="#features"><span class="en">Features</span><span class="pl">Funkcje</span></a></li>
+      <li><a href="#world"><span class="en">World</span><span class="pl">Świat</span></a></li>
+      <li><a href="#guide"><span class="en">How it works</span><span class="pl">Jak to działa</span></a></li>
       <li><a href="#screens"><span class="en">Screenshots</span><span class="pl">Galeria</span></a></li>
       <li><a href="#roadmap"><span class="en">Roadmap</span><span class="pl">Plany</span></a></li>
       <li><a href="#faq">FAQ</a></li>
@@ -371,7 +422,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px;background:#0d0a07}
       <article class="feat rv d2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></div>
         <h3><span class="en">Blueprints &amp; research</span><span class="pl">Plany i badania</span></h3><p><span class="en">Most buildings start unknown. Objectives reveal their plans; research takes resources and real time — even while you are away.</span><span class="pl">Większość budynków na starcie jest nieznana. Misje odsłaniają plany, a badania kosztują surowce i prawdziwy czas — także gdy cię nie ma.</span></p></article>
       <article class="feat rv d3"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18.5 14.8c1.6.8 2.6 2.5 3 5.2"/></svg></div>
-        <h3><span class="en">Survivors with traits</span><span class="pl">Ocalali z cechami</span></h3><p><span class="en">Hard-working, Tinkerer, Green thumb, Tough, Pathfinder, Cheerful. People gain experience — Novice to Master — in the work they do.</span><span class="pl">Pracowity, Majsterkowicz, Zielona ręka, Twardziel, Tropiciel, Pogodny. Ludzie zdobywają doświadczenie — od Nowicjusza do Mistrza.</span></p></article>
+        <h3><span class="en">Survivors with traits</span><span class="pl">Ocalali z cechami</span></h3><p><span class="en">Hard-working, Tinkerer, Green thumb, Tough, Pathfinder, Cheerful. People gain experience — Novice to Master — in the work they do.</span><span class="pl">Pracowity, Majsterkowicz, Ręka do roślin, Twardziel, Tropiciel, Pogodny. Ludzie zdobywają doświadczenie — od Nowicjusza do Mistrza.</span></p></article>
       <article class="feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg></div>
         <h3><span class="en">Expeditions</span><span class="pl">Wyprawy</span></h3><p><span class="en">Nine locations in two regions — from the gas station to the salt town in the Dry Basin. Teams come back with loot, injuries, new maps and sometimes new people.</span><span class="pl">Dziewięć lokacji w dwóch regionach — od stacji benzynowej po solne miasteczko w Suchym Dorzeczu. Drużyny wracają z łupem, ranami, nowymi mapami, a czasem z nowymi ludźmi.</span></p></article>
       <article class="feat rv d1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg></div>
@@ -445,7 +496,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px;background:#0d0a07}
       <figure class="shot" style="margin:0"><span class="tag"><span class="en">Survivors</span><span class="pl">Ocaleni</span></span><img src="assets/img/roster.webp" alt="Survivor roster with traits and experience" loading="lazy" width="1800" height="1012"></figure>
       <div>
         <h3 style="font-size:28px"><span class="en">People, not units</span><span class="pl">Ludzie, nie jednostki</span></h3>
-        <p style="color:#d6c9ad;margin:0"><span class="en">Every survivor has a name, a role, a trait, health and morale. Put the Green thumb on the farm and the Tinkerer in the workshop — and watch them grow into masters of their trade.</span><span class="pl">Każdy ocalały ma imię, rolę, cechę, zdrowie i morale. Postaw Zieloną rękę na polu, a Majsterkowicza w warsztacie — i patrz, jak stają się mistrzami w swoim fachu.</span></p>
+        <p style="color:#d6c9ad;margin:0"><span class="en">Every survivor has a name, a role, a trait, health and morale. Put the Green thumb on the farm and the Tinkerer in the workshop — and watch them grow into masters of their trade.</span><span class="pl">Każdy ocalały ma imię, rolę, cechę, zdrowie i morale. Postaw kogoś z Ręką do roślin na polu, a Majsterkowicza w warsztacie — i patrz, jak stają się mistrzami w swoim fachu.</span></p>
       </div>
     </div>
 
@@ -458,6 +509,85 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px;background:#0d0a07}
     </div>
   </div>
 </section>
+
+
+<!-- ================= WORLD ================= -->
+<section class="world" id="world">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="kicker"><span class="en">The world</span><span class="pl">Świat</span></div>
+      <h2><span class="en">Beyond the fence</span><span class="pl">Za płotem</span></h2>
+      <p class="sub"><span class="en">Nobody agrees anymore on how it ended. The grid went first, then the roads, then the towns. The rain still falls — but it comes down grey. What is left is dust, rust and people who refused to give up.</span><span class="pl">Nikt już nie wie na pewno, jak to się skończyło. Najpierw padła sieć, potem drogi, potem miasta. Deszcz wciąż pada — ale szary. Zostały pył, rdza i ludzie, którzy nie chcieli się poddać.</span></p>
+    </div>
+    <div class="region-switch rv" role="tablist">
+      <button type="button" role="tab" aria-selected="true" data-region="outpost">☢️ Outpost 17</button>
+      <button type="button" role="tab" aria-selected="false" data-region="basin">🧂 <span class="en">The Dry Basin</span><span class="pl">Suche Dorzecze</span></button>
+    </div>
+    <div class="region-panel" data-panel="outpost">
+      <p class="region-intro"><span class="en">The roads, ruins and farms around home. Every team that comes back reveals the next place on the map.</span><span class="pl">Drogi, ruiny i farmy wokół domu. Każda drużyna, która wraca, odkrywa kolejne miejsce na mapie.</span></p>
+      <div class="loc-grid">
+        <article class="loc rv"><span class="em">⛽</span><h3><span class="en">Abandoned Gas Station</span><span class="pl">Opuszczona stacja benzynowa</span></h3>
+          <p><span class="en">A roadside stop two kilometres east. Picked over, but the tanks may not be dry.</span><span class="pl">Przydrożna stacja dwa kilometry na wschód. Przeszukana, ale zbiorniki mogą nie być puste.</span></p>
+          <div class="meta"><span class="r-low"><span class="en">low risk</span><span class="pl">niskie ryzyko</span></span><span>⏱ 5 min</span></div>
+          <div class="loot"><span class="en">Loot: scrap, fuel, components</span><span class="pl">Łup: złom, paliwo, części</span></div></article>
+        <article class="loc rv"><span class="em">🏚️</span><h3><span class="en">Residential Ruins</span><span class="pl">Ruiny osiedla</span></h3>
+          <p><span class="en">Rows of burned-out houses. Timber, tinned food — and sometimes people.</span><span class="pl">Rzędy spalonych domów. Drewno, konserwy — a czasem ludzie.</span></p>
+          <div class="meta"><span class="r-low"><span class="en">low risk</span><span class="pl">niskie ryzyko</span></span><span>⏱ 10 min</span></div>
+          <div class="loot"><span class="en">Loot: wood, food, planks, new survivors</span><span class="pl">Łup: drewno, jedzenie, deski, nowi ocaleni</span></div></article>
+        <article class="loc rv"><span class="em">🏭</span><h3><span class="en">Small Warehouse</span><span class="pl">Mały magazyn</span></h3>
+          <p><span class="en">A logistics shed by the old rail line. Shelving, crates, electronics.</span><span class="pl">Hala przy starej linii kolejowej. Regały, skrzynie, elektronika.</span></p>
+          <div class="meta"><span class="r-medium"><span class="en">medium risk</span><span class="pl">średnie ryzyko</span></span><span>⏱ 15 min</span></div>
+          <div class="loot"><span class="en">Loot: scrap, components, metal</span><span class="pl">Łup: złom, części, metal</span></div></article>
+        <article class="loc rv"><span class="em">🌾</span><h3><span class="en">Rural Farm</span><span class="pl">Wiejska farma</span></h3>
+          <p><span class="en">A farmstead past the reservoir. Root cellars and a working cistern.</span><span class="pl">Gospodarstwo za zbiornikiem. Piwnice z zapasami i działająca cysterna.</span></p>
+          <div class="meta"><span class="r-medium"><span class="en">medium risk</span><span class="pl">średnie ryzyko</span></span><span>⏱ 20 min</span></div>
+          <div class="loot"><span class="en">Loot: food, water, grain, vegetables</span><span class="pl">Łup: jedzenie, woda, zboże, warzywa</span></div></article>
+        <article class="loc rv"><span class="em">🏥</span><h3><span class="en">Old Clinic</span><span class="pl">Stara klinika</span></h3>
+          <p><span class="en">Looted long ago, but the basement pharmacy was sealed.</span><span class="pl">Splądrowana dawno temu, ale apteka w piwnicy była zamknięta.</span></p>
+          <div class="meta"><span class="r-medium"><span class="en">medium risk</span><span class="pl">średnie ryzyko</span></span><span>⏱ 25 min</span></div>
+          <div class="loot"><span class="en">Loot: medicine, herbs, components</span><span class="pl">Łup: lekarstwa, zioła, części</span></div></article>
+      </div>
+    </div>
+    <div class="region-panel" data-panel="basin" hidden>
+      <p class="region-intro"><span class="en">A dead river valley beyond the ridge, mapped by the Free Caravans. Long trips, higher risk, much richer salvage — the maps are sold only to their trusted friends.</span><span class="pl">Martwa dolina rzeki za granią, zmapowana przez Wolne Karawany. Długie wyprawy, większe ryzyko, znacznie bogatsze łupy — mapy sprzedają tylko zaufanym przyjaciołom.</span></p>
+      <div class="loc-grid">
+        <article class="loc rv"><span class="em">🛶</span><h3><span class="en">Dry Riverbed</span><span class="pl">Wyschnięte koryto</span></h3>
+          <p><span class="en">Where the caravans cross the old river. Stranded barges and cracked mud for miles.</span><span class="pl">Tu karawany przekraczają dawną rzekę. Osiadłe barki i popękane błoto po horyzont.</span></p>
+          <div class="meta"><span class="r-medium"><span class="en">medium risk</span><span class="pl">średnie ryzyko</span></span><span>⏱ 30 min</span></div>
+          <div class="loot"><span class="en">Loot: scrap, planks, metal, stone</span><span class="pl">Łup: złom, deski, metal, kamień</span></div></article>
+        <article class="loc rv"><span class="em">🚛</span><h3><span class="en">Crashed Convoy</span><span class="pl">Rozbity konwój</span></h3>
+          <p><span class="en">A military convoy that never made it out — and whoever guards it now.</span><span class="pl">Wojskowy konwój, który nigdy nie dojechał — i ktoś, kto teraz go pilnuje.</span></p>
+          <div class="meta"><span class="r-high"><span class="en">high risk</span><span class="pl">wysokie ryzyko</span></span><span>⏱ 45 min</span></div>
+          <div class="loot"><span class="en">Loot: metal, components, fuel, medicine</span><span class="pl">Łup: metal, części, paliwo, lekarstwa</span></div></article>
+        <article class="loc rv"><span class="em">💧</span><h3><span class="en">Pumping Station</span><span class="pl">Przepompownia</span></h3>
+          <p><span class="en">A concrete hall that once fed the valley. Deep wells and pumps worth a fortune.</span><span class="pl">Betonowa hala, która kiedyś poiła dolinę. Głębokie studnie i pompy warte fortunę.</span></p>
+          <div class="meta"><span class="r-medium"><span class="en">medium risk</span><span class="pl">średnie ryzyko</span></span><span>⏱ 60 min</span></div>
+          <div class="loot"><span class="en">Loot: water, components, herbs, bricks</span><span class="pl">Łup: woda, części, zioła, cegły</span></div></article>
+        <article class="loc rv"><span class="em">🧂</span><h3><span class="en">Saltmarsh</span><span class="pl">Solnisko</span></h3>
+          <p><span class="en">A town half buried in salt. The caravans winter here — and so do others.</span><span class="pl">Miasteczko w połowie zasypane solą. Karawany tu zimują — i nie tylko one.</span></p>
+          <div class="meta"><span class="r-high"><span class="en">high risk</span><span class="pl">wysokie ryzyko</span></span><span>⏱ 90 min</span></div>
+          <div class="loot"><span class="en">Loot: medicine, components, metal, food</span><span class="pl">Łup: lekarstwa, części, metal, jedzenie</span></div></article>
+      </div>
+    </div>
+    <div class="lore-row">
+      <div class="lore rv">
+        <h3>🚚 <span class="en">The Free Caravans</span><span class="pl">Wolne Karawany</span></h3>
+        <p><span class="en">Trucks and carts on the old highway. They trade with anyone who keeps their word — and they remember who does not. A convoy stops at the gate every few hours, sells what the wasteland lacks and asks for help with what the road needs.</span><span class="pl">Ciężarówki i wozy na starej szosie. Handlują z każdym, kto dotrzymuje słowa — i pamiętają, kto nie dotrzymał. Konwój staje pod bramą co kilka godzin, sprzedaje to, czego brakuje na pustkowiach, i prosi o pomoc w tym, czego potrzebuje droga.</span></p>
+        <div class="tier-track">
+          <span><span class="en">Stranger</span><span class="pl">Obcy</span><small>0</small></span>
+          <span><span class="en">Known</span><span class="pl">Znajomy</span><small>10</small></span>
+          <span><span class="en">Trusted</span><span class="pl">Zaufany</span><small>30</small></span>
+          <span>Partner<small>60</small></span>
+        </div>
+      </div>
+      <div class="lore rv d1">
+        <h3>⚖️ <span class="en">Hard choices</span><span class="pl">Trudne wybory</span></h3>
+        <p><span class="en">Refugees at the gate. Fever in the bunks. Dust storms that slow the farms. A supply cache in the ruins. Raiders on the ridge. The wasteland asks questions — you decide the answers. Anything that could cost you resources waits for your call, even while you sleep.</span><span class="pl">Uchodźcy u bramy. Gorączka w barakach. Burze piaskowe, które spowalniają pola. Skrytka z zapasami w ruinach. Najeźdźcy na grani. Pustkowia zadają pytania — ty decydujesz o odpowiedziach. Wszystko, co może cię kosztować, czeka na twoją decyzję, nawet gdy śpisz.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="hazard thin"></div>
 
 <!-- ================= LOOP ================= -->
 <section class="loop">
@@ -474,6 +604,63 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px;background:#0d0a07}
         <span class="time"><span class="en">During the day</span><span class="pl">W ciągu dnia</span></span><h3><span class="en">It runs</span><span class="pl">Osada działa</span></h3><p><span class="en">Up to 8–12 hours of fair offline progress, calculated on the server — never from your clock.</span><span class="pl">Do 8–12 godzin uczciwego postępu offline, liczonego na serwerze — nigdy z zegara twojego urządzenia.</span></p></div>
       <div class="step rv d2"><div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></div>
         <span class="time"><span class="en">Evening</span><span class="pl">Wieczorem</span></span><h3><span class="en">Come back</span><span class="pl">Wróć</span></h3><p><span class="en">Read the report, claim your daily goals, decide what waited for you — and plan the night.</span><span class="pl">Przeczytaj raport, odbierz cele dnia, podejmij decyzje, które na ciebie czekały — i zaplanuj noc.</span></p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= GUIDE ================= -->
+<section id="guide">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="kicker"><span class="en">How it works</span><span class="pl">Jak to działa</span></div>
+      <h2><span class="en">The game at a glance</span><span class="pl">Gra w pigułce</span></h2>
+      <p class="sub"><span class="en">Easy to start, deep enough to plan for weeks. Here is what runs Outpost 17.</span><span class="pl">Łatwo zacząć, a planować można tygodniami. Oto co napędza Placówkę 17.</span></p>
+    </div>
+    <div class="guide-grid">
+      <div class="gcard rv">
+        <h3>⏳ <span class="en">Time</span><span class="pl">Czas</span></h3>
+        <span class="big"><span class="en">1 day = 1 hour</span><span class="pl">1 dzień = 1 godzina</span></span>
+        <p><span class="en">One game day lasts one real hour. Every survivor eats 1 food and drinks 1 clean water per game day.</span><span class="pl">Jeden dzień w grze trwa godzinę. Każdy ocalały zjada 1 jedzenie i wypija 1 czystą wodę na dzień gry.</span></p>
+      </div>
+      <div class="gcard rv d1">
+        <h3>🌙 <span class="en">While you are away</span><span class="pl">Gdy cię nie ma</span></h3>
+        <span class="big">8–12 h</span>
+        <p><span class="en">The server keeps the outpost running for up to 8–12 hours, depending on your rank — then shows a report of everything that happened.</span><span class="pl">Serwer prowadzi placówkę do 8–12 godzin, zależnie od rangi — a potem pokazuje raport ze wszystkiego, co się wydarzyło.</span></p>
+      </div>
+      <div class="gcard rv d2">
+        <h3>🏅 <span class="en">Ranks</span><span class="pl">Rangi</span></h3>
+        <div class="steps"><span><span class="en">Camp</span><span class="pl">Obóz</span></span><b>›</b><span><span class="en">Outpost</span><span class="pl">Placówka</span></span><b>›</b><span><span class="en">Settlement</span><span class="pl">Osada</span></span><b>›</b><span><span class="en">Town</span><span class="pl">Miasteczko</span></span><b>›</b><span><span class="en">Haven</span><span class="pl">Przystań</span></span></div>
+        <p style="margin-top:12px"><span class="en">Renown from objectives, contracts, expeditions and goals raises your rank. Every rank adds permanent perks: a longer offline limit, more contracts, new buildings.</span><span class="pl">Renoma z misji, kontraktów, wypraw i celów podnosi rangę. Każda ranga daje stałe bonusy: dłuższy limit offline, więcej kontraktów, nowe budynki.</span></p>
+      </div>
+      <div class="gcard wide rv">
+        <h3>⛓️ <span class="en">15 resources, three tiers</span><span class="pl">15 surowców w trzech grupach</span></h3>
+        <div class="res-tiers">
+          <div><b><span class="en">Supplies</span><span class="pl">Zapasy</span></b><div class="res"><span><i style="background:#a9a9a9"></i><span class="en">Scrap</span><span class="pl">Złom</span></span><span><i style="background:#b58450"></i><span class="en">Wood</span><span class="pl">Drewno</span></span><span><i style="background:#8fcf5a"></i><span class="en">Food</span><span class="pl">Jedzenie</span></span><span><i style="background:#4fb3e0"></i><span class="en">Clean water</span><span class="pl">Czysta woda</span></span><span><i style="background:#e0a640"></i><span class="en">Fuel</span><span class="pl">Paliwo</span></span><span><i style="background:#c25f2c"></i><span class="en">Components</span><span class="pl">Części</span></span><span><i style="background:#e05a5a"></i><span class="en">Medicine</span><span class="pl">Lekarstwa</span></span></div></div>
+          <div><b><span class="en">Raw</span><span class="pl">Surowce</span></b><div class="res"><span><i style="background:#7a6a4a"></i><span class="en">Dirty water</span><span class="pl">Brudna woda</span></span><span><i style="background:#e08a3a"></i><span class="en">Vegetables</span><span class="pl">Warzywa</span></span><span><i style="background:#e0c060"></i><span class="en">Grain</span><span class="pl">Zboże</span></span><span><i style="background:#6aa84f"></i><span class="en">Herbs</span><span class="pl">Zioła</span></span><span><i style="background:#9a9488"></i><span class="en">Stone</span><span class="pl">Kamień</span></span></div></div>
+          <div><b><span class="en">Processed</span><span class="pl">Przetworzone</span></b><div class="res"><span><i style="background:#d2a066"></i><span class="en">Planks</span><span class="pl">Deski</span></span><span><i style="background:#8a9aa8"></i><span class="en">Metal</span><span class="pl">Metal</span></span><span><i style="background:#b5583a"></i><span class="en">Bricks</span><span class="pl">Cegły</span></span></div></div>
+        </div>
+        <div class="chain"><span class="raw">💧 <span class="en">Dirty water</span><span class="pl">Brudna woda</span></span><b>→</b><span><span class="en">Purifier</span><span class="pl">Uzdatnianie</span></span><b>→</b><span class="ok"><span class="en">Clean water</span><span class="pl">Czysta woda</span></span></div>
+        <div class="chain"><span class="raw">🌾 <span class="en">Grain</span><span class="pl">Zboże</span></span><b>+</b><span class="ok">💧</span><b>→</b><span><span class="en">Kitchen</span><span class="pl">Kuchnia</span></span><b>→</b><span class="ok">🍞 <span class="en">Bread</span><span class="pl">Chleb</span></span></div>
+        <div class="chain"><span class="raw">🪨 <span class="en">Stone</span><span class="pl">Kamień</span></span><b>→</b><span><span class="en">Kiln</span><span class="pl">Piec</span></span><b>→</b><span class="ok">🧱 <span class="en">Bricks</span><span class="pl">Cegły</span></span><b>→</b><span><span class="en">Level 3 upgrades</span><span class="pl">Ulepszenia poz. 3</span></span></div>
+      </div>
+      <div class="gcard rv d1">
+        <h3>📜 <span class="en">Blueprints</span><span class="pl">Plany</span></h3>
+        <span class="big">20</span>
+        <p><span class="en">Twenty buildings. Most start unknown: objectives reveal their plans, and research takes resources and real time — from 5 minutes to 8 hours, even while you are away.</span><span class="pl">Dwadzieścia budynków. Większość jest na starcie nieznana: misje odsłaniają plany, a badania kosztują surowce i prawdziwy czas — od 5 minut do 8 godzin, także gdy cię nie ma.</span></p>
+      </div>
+      <div class="gcard wide rv">
+        <h3>🧑‍🤝‍🧑 <span class="en">Survivors</span><span class="pl">Ocaleni</span></h3>
+        <p><span class="en">Every survivor has a role, health, morale and one trait:</span><span class="pl">Każdy ocalały ma rolę, zdrowie, morale i jedną cechę:</span></p>
+        <div class="traits"><span><span class="en">Hard-working</span><span class="pl">Pracowity</span></span><span><span class="en">Tinkerer</span><span class="pl">Majsterkowicz</span></span><span><span class="en">Green thumb</span><span class="pl">Ręka do roślin</span></span><span><span class="en">Tough</span><span class="pl">Twardziel</span></span><span><span class="en">Pathfinder</span><span class="pl">Tropiciel</span></span><span><span class="en">Cheerful</span><span class="pl">Pogodny</span></span></div>
+        <div class="steps"><span><span class="en">Novice</span><span class="pl">Nowicjusz</span></span><b>›</b><span><span class="en">Skilled</span><span class="pl">Wprawny</span></span> +10%<b>›</b><span><span class="en">Expert</span><span class="pl">Ekspert</span></span> +20%<b>›</b><span><span class="en">Master</span><span class="pl">Mistrz</span></span> +30%</div>
+        <p style="margin-top:12px"><span class="en">Experience grows in the kind of building they work in. Put the right person in the right place.</span><span class="pl">Doświadczenie rośnie w budynkach, w których pracują. Postaw właściwą osobę we właściwym miejscu.</span></p>
+      </div>
+      <div class="gcard rv d1">
+        <h3>🎯 <span class="en">Daily rounds</span><span class="pl">Codzienny obchód</span></h3>
+        <span class="big">3 + 3</span>
+        <p><span class="en">Three short goals every day, three bigger ones every week. Progress counts offline; finished goals are delivered automatically and unfinished ones simply expire.</span><span class="pl">Trzy krótkie cele codziennie, trzy większe co tydzień. Postęp liczy się offline; ukończone są dostarczane automatycznie, a nieukończone po prostu przepadają.</span></p>
+      </div>
     </div>
   </div>
 </section>
@@ -568,9 +755,9 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px;background:#0d0a07}
         <p class="sub" style="color:#cfc8e4"><span class="en">WASTELAND is built in the open, one update at a time. The Discord is where it happens.</span><span class="pl">WASTELAND powstaje na oczach graczy, aktualizacja po aktualizacji. Wszystko dzieje się na Discordzie.</span></p>
         <ul class="perks">
           <li><span><b><span class="en">First news</span><span class="pl">Pierwsze newsy</span></b> — <span class="en">every update, as it lands</span><span class="pl">każda aktualizacja od razu</span></span></li>
-          <li><span><b><span class="en">Test access</span><span class="pl">Dostęp do testów</span></b> — <span class="en">play builds before anyone else</span><span class="pl">graj w wersje przed innymi</span></span></li>
+          <li><span><b><span class="en">Playtest channel</span><span class="pl">Kanał testerów</span></b> — <span class="en">play builds before anyone else</span><span class="pl">graj w wersje przed innymi</span></span></li>
           <li><span><b><span class="en">Your ideas</span><span class="pl">Twoje pomysły</span></b> — <span class="en">suggest and vote on features</span><span class="pl">proponuj i głosuj na funkcje</span></span></li>
-          <li><span><b><span class="en">Bug reports</span><span class="pl">Zgłoszenia błędów</span></b> — <span class="en">straight to the developer</span><span class="pl">prosto do twórcy</span></span></li>
+          <li><span><b><span class="en">Feedback forum</span><span class="pl">Forum opinii</span></b> — <span class="en">ideas and bug reports, straight to the developer</span><span class="pl">pomysły i błędy prosto do twórcy</span></span></li>
           <li><span><b><span class="en">Screenshots</span><span class="pl">Zrzuty ekranu</span></b> — <span class="en">show off your outpost</span><span class="pl">pochwal się swoją placówką</span></span></li>
           <li><span><b><span class="en">Polish &amp; English</span><span class="pl">Po polsku i angielsku</span></b> — <span class="en">everyone welcome</span><span class="pl">każdy mile widziany</span></span></li>
         </ul>
@@ -673,6 +860,12 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px;background:#0d0a07}
     radio.querySelectorAll('.ln').forEach((l, i) => { l.style.transitionDelay = (0.25 + i * 0.45) + 's'; });
   }, { threshold: 0.4 });
   rio.observe(radio);
+
+  // ---- world: region tabs
+  document.querySelectorAll('.region-switch button').forEach((b) => b.addEventListener('click', () => {
+    document.querySelectorAll('.region-switch button').forEach((x) => x.setAttribute('aria-selected', String(x === b)));
+    document.querySelectorAll('.region-panel').forEach((p) => { p.hidden = p.dataset.panel !== b.dataset.region; p.querySelectorAll('.rv').forEach((el) => el.classList.add('in')); });
+  }));
 
   // ---- lightbox
   const lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
