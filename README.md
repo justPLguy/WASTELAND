@@ -47,6 +47,7 @@ a report tells you exactly what happened while you were away.
 | 🚚 **Free Caravans** | Traders stop at the gate every few hours. Trade, fill their requests and earn reputation for better prices and the maps of new lands. |
 | ⚖️ **Hard decisions** | Refugees, fevers, dust storms, supply caches, raiders on the ridge. Anything that can cost you waits for your call. |
 | 📈 **Campaign & ranks** | 7 chapters, 46 objectives, a contract board, land clearing and ranks from Camp to Haven. |
+| 🎯 **Daily rounds** | 3 short goals every day and 3 bigger ones every week. Progress counts while you are away; unfinished goals simply expire. |
 
 ## 🖼️ Screenshots
 
@@ -78,12 +79,13 @@ a report tells you exactly what happened while you were away.
 
 | ✅ Playable now | 🔜 Next | 🌄 Later |
 |---|---|---|
-| Building, upgrading and moving | Daily goals | Late-game projects |
-| Production chains, 15 resources | More factions and regions | Accounts, play on any device |
-| Survivors with traits and experience | More locations and survivor stories | Mobile app |
+| Building, upgrading and moving | More factions and regions | Late-game projects |
+| Production chains, 15 resources | More locations and survivor stories | Accounts, play on any device |
+| Survivors with traits and experience | | Mobile app |
 | Expeditions, events, contracts, ranks | | Cooperative features — never hostile PvP |
 | 7-chapter campaign, blueprints, research | | |
 | The Free Caravans and the Dry Basin | | |
+| Daily and weekly goals | | |
 | Desktop & phone, English & Polish | | |
 
 Every update is described in the public **[update notes](https://github.com/justPLguy/WASTELAND-changelog/releases)**.
