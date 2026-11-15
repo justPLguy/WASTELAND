@@ -39,10 +39,11 @@ a report tells you exactly what happened while you were away.
 
 | | |
 |---|---|
-| 🏗️ **Build & rearrange** | Twenty buildings — shelters, purifiers, farms, a forge, a kiln, a trading post. Upgrade, repair and move them around the map. |
+| 🏗️ **Build & rearrange** | Twenty-one buildings — shelters, purifiers, farms, a forge, a kiln, a trading post, a campfire. Upgrade, repair and move them around the map. |
 | ⛓️ **Production chains** | Dirty water → purifier → clean water. Vegetables → kitchen → meals. Scrap → forge → metal → workshop. 15 resources in three tiers. |
 | 📜 **Blueprints & research** | Most buildings start unknown. Objectives reveal their plans; research takes resources and real time — even while you are away. |
 | 🧑‍🤝‍🧑 **Survivors with traits** | Hard-working, Tinkerer, Green thumb, Tough, Pathfinder, Cheerful — and experience from Novice to Master in the work they do. |
+| 🔥 **Morale & comfort** | Every survivor's morale heads toward a target you can read: food, beds, a campfire, hot meals, rest. Inspired people work faster; low spirits slow work down but never cost health. |
 | 🗺️ **Expeditions** | Nine locations in two regions, from the gas station to the salt town of the Dry Basin. Loot, injuries, new maps, new people. |
 | 🚚 **Free Caravans** | Traders stop at the gate every few hours. Trade, fill their requests and earn reputation for better prices and the maps of new lands. |
 | ⚖️ **Hard decisions** | Refugees, fevers, dust storms, supply caches, raiders on the ridge. Anything that can cost you waits for your call. |
@@ -79,10 +80,11 @@ a report tells you exactly what happened while you were away.
 
 | ✅ Playable now | 🔜 Next | 🌄 Later |
 |---|---|---|
-| Building, upgrading and moving | More factions and regions | Late-game projects |
-| Production chains, 15 resources | More locations and survivor stories | Accounts, play on any device |
-| Survivors with traits and experience | | Mobile app |
-| Expeditions, events, contracts, ranks | | Cooperative features — never hostile PvP |
+| Building, upgrading and moving | A second faction: The Verdant | Late-game projects |
+| Production chains, 15 resources | A new region: The Green Scar | Accounts, play on any device |
+| Survivors with traits and experience | Vehicles and advanced expeditions | Mobile app |
+| Morale, comfort and the Campfire | More locations and survivor stories | Cooperative features — never hostile PvP |
+| Expeditions, events, contracts, ranks | | |
 | 7-chapter campaign, blueprints, research | | |
 | The Free Caravans and the Dry Basin | | |
 | Daily and weekly goals | | |
@@ -112,28 +114,5 @@ Cała gra jest po polsku i po angielsku, działa na komputerze i telefonie, bez 
 
 </details>
 
----
-
-<details>
-<summary><b>🛠️ About this repository (the website)</b></summary>
-
-<br>
-
-This repository contains only the static landing page, published with GitHub Pages.
-
-```
-index.html            the whole page (HTML, CSS and JS in one file, no build step, no external requests)
-assets/brand/         logo (WebP with transparent edges), favicons and app icons
-assets/img/           screenshots from the current build and og.jpg (link preview for Discord and social media)
-.nojekyll             serve files as they are
-```
-
-- **Publishing:** Settings → Pages → *Deploy from a branch* → `main` / `(root)`.
-- **Preview locally:** run `python -m http.server` in this folder and open <http://localhost:8000>.
-- **Languages:** English and Polish live side by side in `index.html` (`<span class="en">` / `<span class="pl">`);
-  the page follows the browser language, remembers the choice and accepts `?lang=pl` / `?lang=en`.
-- **Link preview:** `og:url` and `og:image` in `index.html` must use the full address of the site.
-
-</details>
 
 <p align="center"><sub>© 2026 WASTELAND · An independent game in active development — everything you see may still change.</sub></p>
