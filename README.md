@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://justplguy.github.io/WASTELAND/"><img alt="Website" src="https://img.shields.io/badge/website-justplguy.github.io%2FWASTELAND-c25f2c?style=for-the-badge"></a>
-  <a href="https://discord.gg/atxXYTb63Z"><img alt="Discord" src="https://img.shields.io/badge/Discord-join%20the%20outpost-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
+  <a href="https://discord.gg/zpjzJwGTew"><img alt="Discord" src="https://img.shields.io/badge/Discord-join%20the%20outpost-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
   <a href="https://github.com/justPLguy/WASTELAND-changelog/releases"><img alt="Update notes" src="https://img.shields.io/badge/update%20notes-changelog-e0b866?style=for-the-badge&logo=github&logoColor=black"></a>
 </p>
 
@@ -32,7 +32,7 @@ Then you close the game — and the outpost keeps working. Farms grow, water get
 research finishes and caravans come and go, all calculated on the server from real time. When you come back,
 a report tells you exactly what happened while you were away.
 
-> 🧪 **WASTELAND is in closed development.** Test builds are shared on the **[Discord](https://discord.gg/atxXYTb63Z)**.
+> 🧪 **WASTELAND is in closed development.** Test builds are shared on the **[Discord](https://discord.gg/zpjzJwGTew)**.
 > This repository hosts the game's website — the game itself is not open source.
 
 ## ✨ What you do
@@ -93,7 +93,7 @@ Every update is described in the public **[update notes](https://github.com/just
 ## 🔗 Links
 
 - 🌐 **Website:** <https://justplguy.github.io/WASTELAND/>
-- 💬 **Discord:** <https://discord.gg/atxXYTb63Z>
+- 💬 **Discord:** <https://discord.gg/zpjzJwGTew>
 - 📜 **Update notes:** <https://github.com/justPLguy/WASTELAND-changelog/releases>
 
 <details>
@@ -107,8 +107,32 @@ kto gdzie pracuje, co powstaje, dokąd idą wyprawy i co się dzieje, gdy obcy p
 A gdy zamkniesz grę, placówka pracuje dalej: pola rosną, woda się uzdatnia, wyprawy wracają, badania się kończą,
 a karawany przyjeżdżają i odjeżdżają.
 
-Gra jest w zamkniętym rozwoju — wersje testowe trafiają na **[Discorda](https://discord.gg/atxXYTb63Z)**.
+Gra jest w zamkniętym rozwoju — wersje testowe trafiają na **[Discorda](https://discord.gg/zpjzJwGTew)**.
 Cała gra jest po polsku i po angielsku, działa na komputerze i telefonie, bez pay-to-win.
+
+</details>
+
+---
+
+<details>
+<summary><b>🛠️ About this repository (the website)</b></summary>
+
+<br>
+
+This repository contains only the static landing page, published with GitHub Pages.
+
+```
+index.html            the whole page (HTML, CSS and JS in one file, no build step, no external requests)
+assets/brand/         logo (WebP with transparent edges), favicons and app icons
+assets/img/           screenshots from the current build and og.jpg (link preview for Discord and social media)
+.nojekyll             serve files as they are
+```
+
+- **Publishing:** Settings → Pages → *Deploy from a branch* → `main` / `(root)`.
+- **Preview locally:** run `python -m http.server` in this folder and open <http://localhost:8000>.
+- **Languages:** English and Polish live side by side in `index.html` (`<span class="en">` / `<span class="pl">`);
+  the page follows the browser language, remembers the choice and accepts `?lang=pl` / `?lang=en`.
+- **Link preview:** `og:url` and `og:image` in `index.html` must use the full address of the site.
 
 </details>
 
