@@ -112,28 +112,4 @@ Cała gra jest po polsku i po angielsku, działa na komputerze i telefonie, bez 
 
 </details>
 
----
-
-<details>
-<summary><b>🛠️ About this repository (the website)</b></summary>
-
-<br>
-
-This repository contains only the static landing page, published with GitHub Pages.
-
-```
-index.html            the whole page (HTML, CSS and JS in one file, no build step, no external requests)
-assets/brand/         logo (WebP with transparent edges), favicons and app icons
-assets/img/           screenshots from the current build and og.jpg (link preview for Discord and social media)
-.nojekyll             serve files as they are
-```
-
-- **Publishing:** Settings → Pages → *Deploy from a branch* → `main` / `(root)`.
-- **Preview locally:** run `python -m http.server` in this folder and open <http://localhost:8000>.
-- **Languages:** English and Polish live side by side in `index.html` (`<span class="en">` / `<span class="pl">`);
-  the page follows the browser language, remembers the choice and accepts `?lang=pl` / `?lang=en`.
-- **Link preview:** `og:url` and `og:image` in `index.html` must use the full address of the site.
-
-</details>
-
 <p align="center"><sub>© 2026 WASTELAND · An independent game in active development — everything you see may still change.</sub></p>
