@@ -284,6 +284,9 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px;background:#0d0a07}
 .steps > span{padding:6px 9px;border:1px solid var(--line2);border-radius:3px;background:var(--bg)}
 .steps b{color:var(--rust2)}
 
+.nav .lang,.nav .brand,.nav .btn{flex:none}
+@media (max-width:980px){.nav .btn.discord.sm span{display:none}.nav ul{gap:12px}}
+@media (max-width:1180px){.nav ul{gap:14px}.nav ul a{font-size:13px;letter-spacing:.03em;white-space:nowrap}.nav .wrap{gap:16px}}
 @media (max-width:1000px){
   .guide-grid{grid-template-columns:1fr 1fr}.gcard.wide{grid-column:span 2}
   .lore-row{grid-template-columns:1fr}
@@ -342,6 +345,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px;background:#0d0a07}
       <li><a href="#game"><span class="en">The game</span><span class="pl">Gra</span></a></li>
       <li><a href="#world"><span class="en">World</span><span class="pl">Świat</span></a></li>
       <li><a href="#guide"><span class="en">How it works</span><span class="pl">Jak to działa</span></a></li>
+      <li><a href="guide.html"><span class="en">Guide</span><span class="pl">Poradnik</span></a></li>
       <li><a href="#screens"><span class="en">Screenshots</span><span class="pl">Galeria</span></a></li>
       <li><a href="#roadmap"><span class="en">Roadmap</span><span class="pl">Plany</span></a></li>
       <li><a href="#faq">FAQ</a></li>
@@ -616,6 +620,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px;background:#0d0a07}
       <div class="kicker"><span class="en">How it works</span><span class="pl">Jak to działa</span></div>
       <h2><span class="en">The game at a glance</span><span class="pl">Gra w pigułce</span></h2>
       <p class="sub"><span class="en">Easy to start, deep enough to plan for weeks. Here is what runs Outpost 17.</span><span class="pl">Łatwo zacząć, a planować można tygodniami. Oto co napędza Placówkę 17.</span></p>
+      <p style="margin-top:22px"><a class="btn ghost" href="guide.html">📖 <span class="en">Read the full player guide</span><span class="pl">Przeczytaj pełny poradnik</span></a></p>
     </div>
     <div class="guide-grid">
       <div class="gcard rv">
@@ -815,6 +820,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px;background:#0d0a07}
       <a href="https://discord.gg/zpjzJwGTew" target="_blank" rel="noopener">Discord</a>
       <a href="https://github.com/justPLguy/WASTELAND-changelog/releases" target="_blank" rel="noopener"><span class="en">Update notes</span><span class="pl">Dziennik zmian</span></a>
       <a href="#features"><span class="en">Features</span><span class="pl">Funkcje</span></a>
+      <a href="guide.html"><span class="en">Player guide</span><span class="pl">Poradnik</span></a>
       <a href="#roadmap"><span class="en">Roadmap</span><span class="pl">Plany</span></a>
     </nav>
     <small><span class="en">© 2026 WASTELAND · An independent game in active development — everything you see may still change.</span><span class="pl">© 2026 WASTELAND · Niezależna gra w aktywnym rozwoju — wszystko, co widzisz, może się jeszcze zmienić.</span></small>
