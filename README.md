@@ -39,10 +39,12 @@ a report tells you exactly what happened while you were away.
 
 | | |
 |---|---|
-| 🏗️ **Build & rearrange** | Twenty-one buildings — shelters, purifiers, farms, a forge, a kiln, a trading post, a campfire. Upgrade, repair and move them around the map. |
+| 🏗️ **Build & rearrange** | Twenty-three buildings — shelters, purifiers, farms, a forge, a kiln, a trading post, a campfire, a compost pit, a gear locker. Upgrade, repair and move them around the map. |
 | ⛓️ **Production chains** | Dirty water → purifier → clean water. Vegetables → kitchen → meals. Scrap → forge → metal → workshop. 15 resources in three tiers. |
 | 📜 **Blueprints & research** | Most buildings start unknown. Objectives reveal their plans; research takes resources and real time — even while you are away. |
 | 🧑‍🤝‍🧑 **Survivors with traits** | Hard-working, Tinkerer, Green thumb, Tough, Pathfinder, Cheerful — and experience from Novice to Master in the work they do. |
+| 🎒 **Gear** | Four gear slots per survivor: tools for faster work, weapons, armor and first aid kits for expeditions. Find gear in the ruins or make it, and keep it in a Gear Locker. |
+| 🌿 **The Verdant** | Find the growers of the Green Scar beyond the old railway: fill their requests for permanent farming perks — and take a side when they quarrel with the caravans. |
 | 🔥 **Morale & comfort** | Every survivor's morale heads toward a target you can read: food, beds, a campfire, hot meals, rest. Inspired people work faster; low spirits slow work down but never cost health. |
 | 🗺️ **Expeditions** | Nine locations in two regions, from the gas station to the salt town of the Dry Basin. Loot, injuries, new maps, new people. |
 | 🚚 **Free Caravans** | Traders stop at the gate every few hours. Trade, fill their requests and earn reputation for better prices and the maps of new lands. |
@@ -80,10 +82,12 @@ a report tells you exactly what happened while you were away.
 
 | ✅ Playable now | 🔜 Next | 🌄 Later |
 |---|---|---|
-| Building, upgrading and moving | A second faction: The Verdant | Late-game projects |
-| Production chains, 15 resources | A new region: The Green Scar | Accounts, play on any device |
-| Survivors with traits and experience | Vehicles and advanced expeditions | Mobile app |
-| Morale, comfort and the Campfire | More locations and survivor stories | Cooperative features — never hostile PvP |
+| Building, upgrading and moving | Vehicles and advanced expeditions | Accounts, play on any device |
+| Production chains, 15 resources | Great projects for the late game | Mobile app |
+| Survivors with traits and experience | More locations and survivor stories | Cooperative features — never hostile PvP |
+| Morale, comfort and the Campfire | | |
+| The Verdant and the Green Scar | | |
+| Equipment: tools, weapons, armor, kits | | |
 | Expeditions, events, contracts, ranks | | |
 | 7-chapter campaign, blueprints, research | | |
 | The Free Caravans and the Dry Basin | | |
